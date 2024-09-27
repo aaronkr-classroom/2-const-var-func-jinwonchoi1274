@@ -1,22 +1,23 @@
 #pragma once
 //clac.c
 #include <stdio.h>
-#include <math.h>//M_PI´Â ¿©±â ÀÖ¾î¾ßÇÏÁö¸¸ ¾øÀ¸¸é
+#include <math.h>//M_PIëŠ” ì—¬ê¸° ìˆì–´ì•¼í•˜ì§€ë§Œ ì—†ìœ¼ë©´
 
 
-#ifndef M_PI //¾ÆÁ÷ Á¤ÀÇµÇÁö ¾Ê¾ÒÀ¸¸é
+#ifndef M_PI //ì•„ì§ ì •ì˜ë˜ì§€ ì•Šì•˜ìœ¼ë©´
 #define M_PI 3.1415926535
 #endif
 
 
-//ÇÔ¼ö ¿øÇü ¼±¾ğÇÏ±â
+//í•¨ìˆ˜ ì›í˜• ì„ ì–¸í•˜ê¸°
 double sum(double value1, double value2);
 double sub(double value1, double value2);
 double mul(double value1, double value2);
 double div(double value1, double value2);
 int rem(int value1, int value2);
 
-//Ãß°¡ ÇÔ¼ö
+//ì¶”ê°€ í•¨ìˆ˜
 double power(double base, double exponent);
 double squareRoot(double num);
 double areaOfcircle(double radius);
+double circumferenceOfCircle(double radius);
