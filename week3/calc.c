@@ -1,25 +1,13 @@
 //clac.c
 #include <stdio.h>
-#include <math.h>//M_PI´Â ¿©±â ÀÖ¾î¾ßÇÏÁö¸¸ ¾øÀ¸¸é
-#include "calc.h"	//Á÷Á¢ ¸¸µç .h ÆÄÀÏÀº Å«µû¿ÈÇ¥
+#include <math.h>//M_PIëŠ” ì—¬ê¸° ìˆì–´ì•¼í•˜ì§€ë§Œ ì—†ìœ¼ë©´
+#include "calc.h"	//ì§ì ‘ ë§Œë“  .h íŒŒì¼ì€ í°ë”°ì˜´í‘œ
 
-#ifndef M_PI //¾ÆÁ÷ Á¤ÀÇµÇÁö ¾Ê¾ÒÀ¸¸é
+#ifndef M_PI //ì•„ì§ ì •ì˜ë˜ì§€ ì•Šì•˜ìœ¼ë©´
 #define M_PI 3.1415926535
 #endif
 
 
-//ÇÔ¼ö ¿øÇü ¼±¾ğÇÏ±â
-double sum(double value1, double value2);
-double sub(double value1, double value2);
-double mul(double value1, double value2);
-double div(double value1, double value2);
-int rem(int value1, int value2);
-
-//Ãß°¡ ÇÔ¼ö
-double power(double base, double exponent);
-double squareRoot(double num);
-double areaOfcircle(double radius);
-double circumferenceOfCircle(double radius);
 
 int main(void) {
 	double  x = 2,
@@ -31,7 +19,7 @@ int main(void) {
 	printf("x:%.1f / y:%.1f = %.1f\n", x, y, div(x, y));
 	printf("x:%d %% y:%d = %d\n", (int)x, (int)y, rem(x, y));
 
-	//Ãß°¡ ºÎºĞ
+	//ì¶”ê°€ ë¶€ë¶„
 
 	printf("x : %.1f ^ y : %.1f = %.1f\n",x,y,pow(x , y));
 	printf("sqrt of x: %.1f = %.1f\n",x,squareRoot(x));
@@ -44,20 +32,20 @@ int main(void) {
 
 
 
-//´õÇÏ±â
+//ë”í•˜ê¸°
 double sum(double value1, double value2) {
 	return value1 + value2;
 }
 
-//»©(sub)
+//ë¹¼(sub)
 double sub(double value1, double value2) {
 	return value1 - value2;
 }
-//°öÇÏ±â(mul)
+//ê³±í•˜ê¸°(mul)
 double mul(double value1, double value2) {
 	return value1 * value2;
 }
-//³ª´©±â(div)
+//ë‚˜ëˆ„ê¸°(div)
 double div(double value1, double value2) {
 	if(value2 != 0)return value1 / value2;
 	else {
@@ -66,19 +54,19 @@ double div(double value1, double value2) {
 	}
 }
 
-//³ª¸ÓÁö(rem)
+//ë‚˜ë¨¸ì§€(rem)
 int rem(int value1, int value2) {
 	if (value2 != 0) return value1 % value2;
 	else
 		printf("Error: Divide by 0!");
 		return 0;
 }
-//Á¦°ö
+//ì œê³±
 double power(double base, double exponent) {
-	return pow(base, exponent); //pow() ÇÔ¼ö
+	return pow(base, exponent); //pow() í•¨ìˆ˜
 
 }
-//Á¦°ö±Ù
+//ì œê³±ê·¼
 double squareRoot(double num) {
 	if (num >= 0)
 		return sqrt(num);
@@ -87,12 +75,12 @@ double squareRoot(double num) {
 		return -1;
 	}
 }
-//³ĞÀÌ
+//ë„“ì´
 double areaOfcircle(double radius) {
-	return M_PI * radius * radius; //m_PI Á¤ÀÇÇØ¾ßµÊ
+	return M_PI * radius * radius; //m_PI ì •ì˜í•´ì•¼ë¨
 
 }
-//µÑ·¹
+//ë‘˜ë ˆ
 double circumferenceOfCircle(double radius) {
 	return 2 * M_PI * radius;
 }
